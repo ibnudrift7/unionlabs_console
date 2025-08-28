@@ -11,6 +11,7 @@
  * @property string $logo
  * @property string $created_at
  * @property string $updated_at
+ * @property string $deleted_at
  */
 class MasterBrands extends CActiveRecord
 {
@@ -43,7 +44,7 @@ class MasterBrands extends CActiveRecord
 			array('name', 'required'),
 			array('name', 'length', 'max'=>150),
 			array('website, logo', 'length', 'max'=>255),
-			array('description, created_at, updated_at', 'safe'),
+			array('description, created_at, updated_at, deleted_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, description, website, logo, created_at, updated_at', 'safe', 'on'=>'search'),
@@ -95,6 +96,8 @@ class MasterBrands extends CActiveRecord
 		$criteria->compare('logo',$this->logo,true);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('updated_at',$this->updated_at,true);
+
+		$criteria->addCondition('deleted_at IS NULL');
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

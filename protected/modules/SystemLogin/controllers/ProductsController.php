@@ -1,6 +1,6 @@
 <?php
 
-class BrandsController extends ControllerAdmin
+class ProductsController extends ControllerAdmin
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -44,20 +44,20 @@ class BrandsController extends ControllerAdmin
 	 */
 	public function actionCreate()
 	{
-		$model=new MasterBrands;
+		$model=new Products;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['MasterBrands']))
+		if(isset($_POST['Products']))
 		{
-			$model->attributes=$_POST['MasterBrands'];
+			$model->attributes=$_POST['Products'];
 			if($model->validate()){
 				$transaction=$model->dbConnection->beginTransaction();
 				try
 				{
 					$model->save();
-					Log::createLog("BrandsController Create $model->id");
+					Log::createLog("ProductsController Create $model->id");
 					Yii::app()->user->setFlash('success','Data has been inserted');
 				    $transaction->commit();
 					$this->redirect(array('index'));
@@ -86,15 +86,15 @@ class BrandsController extends ControllerAdmin
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['MasterBrands']))
+		if(isset($_POST['Products']))
 		{
-			$model->attributes=$_POST['MasterBrands'];
+			$model->attributes=$_POST['Products'];
 			if($model->validate()){
 				$transaction=$model->dbConnection->beginTransaction();
 				try
 				{
 					$model->save();
-					Log::createLog("BrandsController Update $model->id");
+					Log::createLog("ProductsController Update $model->id");
 					Yii::app()->user->setFlash('success','Data Edited');
 				    $transaction->commit();
 					$this->redirect(array('index'));
@@ -121,10 +121,7 @@ class BrandsController extends ControllerAdmin
 		// if(Yii::app()->request->isPostRequest)
 		// {
 			// we only allow deletion via POST request
-			// $this->loadModel($id)->delete();
-			$model = $this->loadModel($id);
-			$model->deleted_at = date('Y-m-d H:i:s');
-			$model->save(false);
+			$this->loadModel($id)->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			// if(!isset($_GET['ajax']))
@@ -140,12 +137,12 @@ class BrandsController extends ControllerAdmin
 	 */
 	public function actionIndex()
 	{
-		$model=new MasterBrands('search');
+		$model=new Products('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['MasterBrands']))
-			$model->attributes=$_GET['MasterBrands'];
+		if(isset($_GET['Products']))
+			$model->attributes=$_GET['Products'];
 
-		$dataProvider=new CActiveDataProvider('MasterBrands');
+		$dataProvider=new CActiveDataProvider('Products');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 			'model'=>$model,
@@ -159,7 +156,7 @@ class BrandsController extends ControllerAdmin
 	 */
 	public function loadModel($id)
 	{
-		$model=MasterBrands::model()->findByPk($id);
+		$model=Products::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -171,7 +168,7 @@ class BrandsController extends ControllerAdmin
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='master-brands-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='products-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
