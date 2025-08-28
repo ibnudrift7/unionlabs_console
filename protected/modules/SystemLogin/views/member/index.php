@@ -1,16 +1,16 @@
 <?php
 $this->breadcrumbs=array(
-	'Wishlists',
+	'User Members',
 );
 
 $this->pageHeader=array(
 'icon'=>'fa fa-minus',
-'title'=>'Wishlists',
-'subtitle'=>'Data Wishlists',
+'title'=>'Members',
+'subtitle'=>'Data Members',
 );
 
 $this->menu=array(
-// array('label'=>'Add Wishlists', 'icon'=>'th-list','url'=>array('create')),
+array('label'=>'Add Members', 'icon'=>'th-list','url'=>array('create')),
 );
 ?>
 
@@ -32,7 +32,7 @@ $this->pageHeader['subtitle'] ?>
 		<div class="wrapped datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
 
 			<?php $this->widget('bootstrap.widgets.TbGridView',array(
-			'id'=>'wishlists-grid',
+			'id'=>'user-members-grid',
 			'dataProvider'=>$model->search(),
 			// 'filter'=>$model,
 			'enableSorting'=>false,
@@ -40,17 +40,27 @@ $this->pageHeader['subtitle'] ?>
 			'type'=>'bordered',
 			'columns'=>array(
 					// 'id',
-		// 'user_id',
+		'email',
+		// 'password_hash',
+		'full_name',
+		'phone',
+		'date_of_birth',
+		// 'is_active',
 		[
-			'name' => 'user_name',
-			'value' => '$data->user->full_name',
+			'name' => 'is_active',
+			'value' => '$data->is_active == 1 ? "Active" : "Inactive"',
 		],
-		// 'product_id',
+		// 'is_banned',
 		[
-			'name' => 'product_name',
-			'value' => '$data->product->name',
+			'name' => 'is_banned',
+			'value' => '$data->is_banned == 1 ? "Banned" : "Not Banned"',
 		],
-		// 'created_at',
+		/*
+		'level_id',
+		'points_balance',
+		'created_at',
+		'updated_at',
+		*/
 			array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template'=>'{update} &nbsp; {delete}',

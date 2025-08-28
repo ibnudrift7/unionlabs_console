@@ -1,16 +1,16 @@
 <?php
 $this->breadcrumbs=array(
-	'Wishlists',
+	'Addresses',
 );
 
 $this->pageHeader=array(
 'icon'=>'fa fa-minus',
-'title'=>'Wishlists',
-'subtitle'=>'Data Wishlists',
+'title'=>'Addresses',
+'subtitle'=>'Data Addresses',
 );
 
 $this->menu=array(
-// array('label'=>'Add Wishlists', 'icon'=>'th-list','url'=>array('create')),
+// array('label'=>'Add Addresses', 'icon'=>'th-list','url'=>array('create')),
 );
 ?>
 
@@ -32,7 +32,7 @@ $this->pageHeader['subtitle'] ?>
 		<div class="wrapped datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
 
 			<?php $this->widget('bootstrap.widgets.TbGridView',array(
-			'id'=>'wishlists-grid',
+			'id'=>'user-addresses-grid',
 			'dataProvider'=>$model->search(),
 			// 'filter'=>$model,
 			'enableSorting'=>false,
@@ -40,17 +40,17 @@ $this->pageHeader['subtitle'] ?>
 			'type'=>'bordered',
 			'columns'=>array(
 					// 'id',
-		// 'user_id',
-		[
-			'name' => 'user_name',
-			'value' => '$data->user->full_name',
-		],
-		// 'product_id',
-		[
-			'name' => 'product_name',
-			'value' => '$data->product->name',
-		],
-		// 'created_at',
+					// 'user_id',
+					'recipient_name',
+					'phone',
+					'address_line',
+					'city',
+		/*
+		'province',
+		'postal_code',
+		'is_default',
+		'created_at',
+		*/
 			array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 			'template'=>'{update} &nbsp; {delete}',

@@ -82,8 +82,8 @@ class UserMembers extends CActiveRecord
 			'date_of_birth' => 'Date Of Birth',
 			'level_id' => 'Level',
 			'points_balance' => 'Points Balance',
-			'is_active' => 'Is Active',
-			'is_banned' => 'Is Banned',
+			'is_active' => 'Active',
+			'is_banned' => 'Banned',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
 		);

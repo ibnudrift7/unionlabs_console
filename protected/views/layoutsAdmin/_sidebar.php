@@ -70,8 +70,8 @@ $menuLists = [
                 'label' => 'Customer',
                 'icons' => 'bi bi-box',
                 'menus' => [
-                    'Customers' => '/SystemLogin/customer/index',
-                    'Addresses' => '/SystemLogin/customerAddresses/index',
+                    'Customers' => '/SystemLogin/member/index',
+                    'Addresses' => '/SystemLogin/memberAddresses/index',
                     'Wishlists' => '/SystemLogin/wishlists/index',
                 ],
             ],
@@ -84,9 +84,9 @@ $menuLists = [
                 'label' => 'Products',
                 'icons' => 'bi bi-box',
                 'menus' => [
-                    'Brands' => '/SystemLogin/masterBrands/index',
-                    'Categories' => '/SystemLogin/masterCategories/index',
                     'Products' => '/SystemLogin/products/index',
+                    'Brands' => '/SystemLogin/brands/index',
+                    'Categories' => '/SystemLogin/categories/index',
                 ],
             ],
         ],

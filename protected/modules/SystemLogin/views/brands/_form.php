@@ -1,5 +1,5 @@
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
-	'id'=>'wishlists-form',
+	'id'=>'master-brands-form',
     'type'=>'horizontal',
 	'enableAjaxValidation'=>false,
 	'clientOptions'=>array(
@@ -13,26 +13,16 @@
 <div class="card mt-3">
 	<div class="card-body">
 		<h5 class="card-title">
-			Data Wishlists		</h5>
+			Data Brands		</h5>
 		<div class="wrapped">
-							<?php 
-							$user_name = $model->user->full_name;
-							// dropdown list
-							$user_list = UserMembers::model()->findAll();
-							$user_list = CHtml::listData($user_list, 'id', 'full_name');
-							echo $form->dropDownListRow($model,'user_id',$user_list, array('class'=>'span5','empty'=>'Select User'));
-							?>
+							<?php echo $form->textFieldRow($model,'name',array('class'=>'span5','maxlength'=>150)); ?>
 
-							<?php 
-							// echo $form->textFieldRow($model,'product_id',array('class'=>'span5','maxlength'=>20)); 
-							$product_list = Products::model()->findAll();
-							$product_list = CHtml::listData($product_list, 'id', 'name');
-							echo $form->dropDownListRow($model,'product_id',$product_list, array('class'=>'span5','empty'=>'Select Product'));
-							?>
+							<?php echo $form->textAreaRow($model,'description',array('rows'=>2, 'cols'=>50, 'class'=>'span8')); ?>
 
-							<?php 
-							// echo $form->textFieldRow($model,'created_at',array('class'=>'span5')); 
-							?>
+							<?php echo $form->textFieldRow($model,'website',array('class'=>'span5','maxlength'=>255)); ?>
+
+							<?php echo $form->textFieldRow($model,'logo',array('class'=>'span5','maxlength'=>255)); ?>
+
 
 						<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',

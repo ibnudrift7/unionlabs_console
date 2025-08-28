@@ -1,5 +1,5 @@
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
-	'id'=>'wishlists-form',
+	'id'=>'user-addresses-form',
     'type'=>'horizontal',
 	'enableAjaxValidation'=>false,
 	'clientOptions'=>array(
@@ -13,26 +13,31 @@
 <div class="card mt-3">
 	<div class="card-body">
 		<h5 class="card-title">
-			Data Wishlists		</h5>
+			Data UserAddresses		</h5>
 		<div class="wrapped">
-							<?php 
-							$user_name = $model->user->full_name;
-							// dropdown list
-							$user_list = UserMembers::model()->findAll();
-							$user_list = CHtml::listData($user_list, 'id', 'full_name');
-							echo $form->dropDownListRow($model,'user_id',$user_list, array('class'=>'span5','empty'=>'Select User'));
-							?>
+			<div class="row">
+				<div class="col-md-6">
+					<?php echo $form->textFieldRow($model,'user_id',array('class'=>'span5','maxlength'=>20)); ?>
 
-							<?php 
-							// echo $form->textFieldRow($model,'product_id',array('class'=>'span5','maxlength'=>20)); 
-							$product_list = Products::model()->findAll();
-							$product_list = CHtml::listData($product_list, 'id', 'name');
-							echo $form->dropDownListRow($model,'product_id',$product_list, array('class'=>'span5','empty'=>'Select Product'));
-							?>
+					<?php echo $form->textFieldRow($model,'recipient_name',array('class'=>'span5','maxlength'=>100)); ?>
 
-							<?php 
-							// echo $form->textFieldRow($model,'created_at',array('class'=>'span5')); 
-							?>
+					<?php echo $form->textFieldRow($model,'phone',array('class'=>'span5','maxlength'=>20)); ?>
+
+					<?php echo $form->textAreaRow($model,'address_line',array('rows'=>2, 'cols'=>50, 'class'=>'span8')); ?>
+				</div>
+				<div class="col-md-6">
+					<?php echo $form->textFieldRow($model,'city',array('class'=>'span5','maxlength'=>100)); ?>
+
+					<?php echo $form->textFieldRow($model,'province',array('class'=>'span5','maxlength'=>100)); ?>
+
+					<?php echo $form->textFieldRow($model,'postal_code',array('class'=>'span5','maxlength'=>20)); ?>
+
+					<?php 
+					// echo $form->textFieldRow($model,'is_default',array('class'=>'span5')); 
+					echo $form->dropDownListRow($model, 'is_default', array(0 => 'No', 1 => 'Yes'));
+					?>
+				</div>
+			</div>
 
 						<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',

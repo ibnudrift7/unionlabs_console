@@ -11,6 +11,7 @@
  */
 class Wishlists extends CActiveRecord
 {
+	public $user_name;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -39,7 +40,7 @@ class Wishlists extends CActiveRecord
 		return array(
 			array('user_id, product_id', 'required'),
 			array('user_id, product_id', 'length', 'max'=>20),
-			array('created_at', 'safe'),
+			array('created_at, user_name', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, user_id, product_id, created_at', 'safe', 'on'=>'search'),
@@ -54,6 +55,8 @@ class Wishlists extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'product' => array(self::BELONGS_TO, 'Products', 'product_id'),
+			'user' => array(self::BELONGS_TO, 'UserMembers', 'user_id'),
 		);
 	}
 

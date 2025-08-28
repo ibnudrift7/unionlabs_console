@@ -9,6 +9,7 @@
  * @property string $parent_id
  * @property string $created_at
  * @property string $updated_at
+ * @property string $deleted_at
  */
 class ProductCategories extends CActiveRecord
 {
@@ -41,7 +42,7 @@ class ProductCategories extends CActiveRecord
 			array('name', 'required'),
 			array('name', 'length', 'max'=>100),
 			array('parent_id', 'length', 'max'=>20),
-			array('created_at, updated_at', 'safe'),
+			array('created_at, updated_at, deleted_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, parent_id, created_at, updated_at', 'safe', 'on'=>'search'),
@@ -89,6 +90,8 @@ class ProductCategories extends CActiveRecord
 		$criteria->compare('parent_id',$this->parent_id,true);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('updated_at',$this->updated_at,true);
+
+		$criteria->addCondition('deleted_at IS NULL');
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -10,7 +10,8 @@ Products > SystemLogin/products
 ProductAttributesVape
 ProductStock
 ProductPhotos
-ProductCategories
+ProductCategories > SystemLogin/categories
+MasterBrands > SystemLogin/brands
 
 Orders > SystemLogin/orders
 OrderDetails > SystemLogin/orderDetails
@@ -22,7 +23,6 @@ MasterOrderStatus > SystemLogin/orderStatus
 Payments > SystemLogin/payments
 MasterCouriers > SystemLogin/couriers
 Warehouses > SystemLogin/warehouses
-MasterBrands > SystemLogin/masterBrands
 UserMemberLevelMaster > SystemLogin/userMemberLevelMaster
 
 SystemLogin
