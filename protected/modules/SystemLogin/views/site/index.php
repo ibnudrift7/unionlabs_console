@@ -26,11 +26,11 @@ $this->breadcrumbs = array(
     </div>
     <?php
         $list_shortcut = array(
-            array('name' => 'Media Module', 'url' => Yii::app()->createUrl('SystemLogin/mediaList/index'), 'icon' => 'bi bi-image', 'count' => MediaListItems::model()->count()),
-            array('name' => 'Artikel Module', 'url' => Yii::app()->createUrl('SystemLogin/artikelList/index'), 'icon' => 'bi bi-newspaper', 'count' => ArtikelList::model()->count()),
-            array('name' => 'Support Module', 'url' => Yii::app()->createUrl('SystemLogin/static/support'), 'icon' => 'bi bi-question-circle', 'count' => 0),
-            array('name' => 'Membership Module', 'url' => Yii::app()->createUrl('SystemLogin/memberList/index'), 'icon' => 'bi bi-question-circle', 'count' => MemberList::model()->count()),
-            array('name' => 'Contact Us', 'url' => Yii::app()->createUrl('SystemLogin/enquire/index'), 'icon' => 'bi bi-question-circle', 'count' => EnquireForm::model()->count()),
+            // array('name' => 'Media Module', 'url' => Yii::app()->createUrl('SystemLogin/mediaList/index'), 'icon' => 'bi bi-image', 'count' => MediaListItems::model()->count()),
+            array('name' => 'Couriers Module', 'url' => Yii::app()->createUrl('SystemLogin/couriers/index'), 'icon' => 'bi bi-truck', 'count' => 0),
+            array('name' => 'Order Status Module', 'url' => Yii::app()->createUrl('SystemLogin/orderStatus/index'), 'icon' => 'bi bi-truck', 'count' => 0),
+            array('name' => 'Payments Module', 'url' => Yii::app()->createUrl('SystemLogin/payments/index'), 'icon' => 'bi bi-truck', 'count' => 0),
+            array('name' => 'Warehouses Module', 'url' => Yii::app()->createUrl('SystemLogin/warehouses/index'), 'icon' => 'bi bi-truck', 'count' => 0),
         );
     ?>
     

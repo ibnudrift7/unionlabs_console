@@ -1,7 +1,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
     <?php
     $user = User::model()->findByAttributes(array('email' => Yii::app()->user->id));
-    $strNames = 'BUDHIST WRS';
+    $strNames = 'UnionLabs';
     ?>
     <div class="d-flex align-items-center justify-content-between">
         <a href="<?php echo \CHtml::normalizeUrl(array('/SystemLogin/site/index')); ?>" class="logo d-flex align-items-center">

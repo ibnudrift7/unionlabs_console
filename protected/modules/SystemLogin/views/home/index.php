@@ -107,7 +107,7 @@
 
         <div class="text-center">
           <p class="text-muted small">
-            Copyright &copy; 2025 by Budhist Worship Center - Admin.<br>
+            Copyright &copy; 2025 by Union Labs - Admin.<br>
             All Rights Reserved.
           </p>
         </div>

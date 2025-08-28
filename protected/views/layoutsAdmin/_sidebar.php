@@ -10,94 +10,88 @@ $arrUser = array(
     '1' => 'Admin',
 );
 
+/**
+ * List Modules Data
+ * Master, couriers, order_status, payments, warehouses
+ * products: brands, categories, subcategories, products
+ * orders: orders, order_items, order_reviews,
+ * users: users, user_address_lists, users_orders, users_whislists
+ * memberships: promotions, membership_level_master
+ */
+
 $menuLists = [
+    // [
+    //     'label' => 'Home',
+    //     'menus' => [
+    //         [
+    //             'label' => 'Home',
+    //             'icons' => 'bi bi-house',
+    //             'menus' => [
+    //                 'Slider List' => '/SystemLogin/slides/index',
+    //                 'Static Home' => '/SystemLogin/static/home',
+    //             ],
+    //         ],
+    //     ],
+    // ],
     [
-        'label' => 'Home',
+        'label' => 'Master Data',
         'menus' => [
             [
-                'label' => 'Home',
-                'icons' => 'bi bi-house',
+                'label' => 'Master Data',
+                'icons' => 'bi bi-box',
                 'menus' => [
-                    'Slider List' => '/SystemLogin/slides/index',
-                    'Static Home' => '/SystemLogin/static/home',
+                    'Couriers' => '/SystemLogin/couriers/index',
+                    'Order Status' => '/SystemLogin/orderStatus/index',
+                    // 'Payments' => '/SystemLogin/payments/index',
+                    'Warehouses' => '/SystemLogin/warehouses/index',
+                    'Promotions' => '/SystemLogin/promotions/index',
+                    'Membership Level' => '/SystemLogin/membershipLevelMaster/index',
                 ],
             ],
         ],
     ],
     [
-        'label' => 'Media',
+        'label' => 'Orders Data',
         'menus' => [
             [
-                'label' => 'Media Module',
-                'icons' => 'bi bi-newspaper',
+                'label' => 'Orders',
+                'icons' => 'bi bi-box',
                 'menus' => [
-                    'Type Media List' => '/SystemLogin/mediaTypes/index',
-                    'Kategori Media List' => '/SystemLogin/mediaCategory/index',
-                    'Data Media List' => '/SystemLogin/mediaList/index',
-                    'Data Music List' => '/SystemLogin/musicList/index',
+                    'Orders' => '/SystemLogin/orders/index',
+                    'Order Reviews' => '/SystemLogin/reviews/index',
+                ],
+            ],
+        ],
+    ],
+    [
+        'label' => 'Customer Data',
+        'menus' => [
+            [
+                'label' => 'Customer',
+                'icons' => 'bi bi-box',
+                'menus' => [
+                    'Customers' => '/SystemLogin/customer/index',
+                    'Addresses' => '/SystemLogin/customerAddresses/index',
+                    'Wishlists' => '/SystemLogin/wishlists/index',
+                ],
+            ],
+        ],
+    ],
+    [
+        'label' => 'Products Data',
+        'menus' => [
+            [
+                'label' => 'Products',
+                'icons' => 'bi bi-box',
+                'menus' => [
+                    'Brands' => '/SystemLogin/masterBrands/index',
+                    'Categories' => '/SystemLogin/masterCategories/index',
+                    'Products' => '/SystemLogin/products/index',
                 ],
             ],
         ],
     ],
 
-    [
-        'label' => 'Artikel',
-        'menus' => [
-            [
-                'label' => 'Artikel / News Module',
-                'icons' => 'bi bi-signal',
-                'menus' => [
-                    'Type Artikel List' => '/SystemLogin/typeArtikel/index',
-                    'Kategori Artikel List' => '/SystemLogin/articlesCategory/index',
-                    'Data Artikel List' => '/SystemLogin/artikelList/index',
-                ],
-            ],
-        ],
-    ],
-
-    [
-        'label' => 'Support Module',
-        'menus' => [
-            [
-                'label' => 'Support Module',
-                'icons' => 'bi bi-headset',
-                'menus' => [
-                    'Bank Rekening' => '/SystemLogin/rekeningList/index',
-                    'Static Page' => '/SystemLogin/static/support',
-                ],
-            ],
-        ],
-    ],
-    [
-        'label' => 'Membership Module',
-        'menus' => [
-            [
-                'label' => 'Membership Module',
-                'icons' => 'bi bi-envelope',
-                'menus' => [
-                    'Member User List' => '/SystemLogin/memberList/index',
-                    'Member Post List' => '/SystemLogin/postItems/index',
-                    'Member Post Comment' => '/SystemLogin/postComments/index',
-                    'Member Post Types Data' => '/SystemLogin/postTypes/index',
-                    'Member Post Like' => '/SystemLogin/postLikes/index',
-                ],
-            ],
-        ],
-    ],
-
-    [
-        'label' => 'Contact Module',
-        'menus' => [
-            [
-                'label' => 'Contact Module',
-                'icons' => 'bi bi-envelope',
-                'menus' => [
-                    'Static Page' => '/SystemLogin/static/contact',
-                    'Enquire Form' => '/SystemLogin/enquire/index',
-                ],
-            ],
-        ],
-    ],
 
     [
         'label' => 'Settings',

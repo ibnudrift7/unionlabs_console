@@ -14,6 +14,6 @@ if (in_array($_SERVER['HTTP_HOST'], $in_domains)) {
 		'server' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'database' => 'budhist',
+		'database' => 'shop_unions',
 	);
 }

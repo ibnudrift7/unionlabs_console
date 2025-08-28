@@ -72,7 +72,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <?php
-        $strNames = 'BUDHIST WORSHIP';
+        $strNames = 'UnionLabs';
         ?>
         <div class="copyright">
             &copy; Copyright <?= date("Y"); ?> <strong><span><?= $strNames ?></span></strong>. All Rights Reserved

@@ -38,6 +38,8 @@ class HomeController extends Controller
 
 	public function actionIndex()
 	{
+		$this->redirect(array('/SystemLogin'));
+		exit;
 		$this->pageTitle = ($this->setting['home_meta_title'] != '') ? $this->setting['home_meta_title'] : 'Budhist Worship - Home';
 		$this->metaKey = ($this->setting['home_meta_keyword'] != '') ? $this->setting['home_meta_keyword'] : 'Budhist Worship,';
 		$this->metaDesc = ($this->setting['home_meta_description'] != '') ? $this->setting['home_meta_description'] : 'Budhist Worship';
