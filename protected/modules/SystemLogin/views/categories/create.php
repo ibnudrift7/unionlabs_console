@@ -1,17 +1,17 @@
 <?php
 $this->breadcrumbs=array(
-	'Product Categories'=>array('index'),
+	'Categories'=>array('index'),
 	'Add',
 );
 
 $this->pageHeader=array(
 'icon'=>'fa fa-minus',
-'title'=>'ProductCategories',
-'subtitle'=>'Add ProductCategories',
+'title'=>'Categories',
+'subtitle'=>'Add Categories',
 );
 
 $this->menu=array(
-array('label'=>'List ProductCategories', 'icon'=>'th-list','url'=>array('index')),
+array('label'=>'List Categories', 'icon'=>'th-list','url'=>array('index')),
 );
 ?>
 

@@ -1,19 +1,19 @@
 <?php
 $this->breadcrumbs=array(
-	'Product Categories'=>array('index'),
+	'Categories'=>array('index'),
 	// $model->name=>array('view','id'=>$model->id),
 	'Edit',
 );
 
 $this->pageHeader=array(
 'icon'=>'fa fa-minus',
-'title'=>'ProductCategories',
-'subtitle'=>'Edit ProductCategories',
+'title'=>'Categories',
+'subtitle'=>'Edit Categories',
 );
 
 $this->menu=array(
-array('label'=>'List ProductCategories', 'icon'=>'th-list','url'=>array('index')),
-array('label'=>'Add ProductCategories', 'icon'=>'plus-sign','url'=>array('create')),
+array('label'=>'List Categories', 'icon'=>'th-list','url'=>array('index')),
+array('label'=>'Add Categories', 'icon'=>'plus-sign','url'=>array('create')),
 // array('label'=>'View ProductCategories', 'icon'=>'pencil','url'=>array('view','id'=>$model->id)),
 );
 ?>

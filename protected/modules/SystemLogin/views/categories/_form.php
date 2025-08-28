@@ -13,7 +13,7 @@
 <div class="card mt-3">
 	<div class="card-body">
 		<h5 class="card-title">
-			Data ProductCategories		</h5>
+			Data Categories		</h5>
 		<div class="wrapped">
 							<?php echo $form->textFieldRow($model,'name',array('class'=>'span5','maxlength'=>100)); ?>
 

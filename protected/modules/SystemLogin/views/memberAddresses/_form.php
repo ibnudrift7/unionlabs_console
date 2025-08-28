@@ -13,11 +13,14 @@
 <div class="card mt-3">
 	<div class="card-body">
 		<h5 class="card-title">
-			Data UserAddresses		</h5>
+			Data User Addresses		</h5>
 		<div class="wrapped">
 			<div class="row">
 				<div class="col-md-6">
-					<?php echo $form->textFieldRow($model,'user_id',array('class'=>'span5','maxlength'=>20)); ?>
+					<?php 
+					// echo $form->textFieldRow($model,'user_id',array('class'=>'span5','maxlength'=>20));
+					echo $form->dropDownListRow($model, 'user_id', CHtml::listData(User::model()->findAll(), 'id', 'name'));
+					 ?>
 
 					<?php echo $form->textFieldRow($model,'recipient_name',array('class'=>'span5','maxlength'=>100)); ?>
 
