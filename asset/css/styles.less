@@ -1,0 +1,521 @@
+/*----------------------- IMPORT FONT ------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i,700,700i,900,900i);
+
+@open_sans: 'Montserrat', sans-serif;
+@font_default: 'Montserrat', sans-serif;
+
+@color_blue: #091C5A;
+
+@base_image: "../images/";
+@base_css: "../css/";
+
+
+/*---------------------------- GENERAL -------------------------*/
+
+img{
+    border: none;
+    user-drag: none; 
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+a:focus{
+    outline: none;
+}
+a{
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.h100per{
+    height: 100%;
+}
+
+#pushstat{ display: none; }
+
+body{
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    
+    font-family: @font_default;
+    font-weight: 400;
+    font-size: 14px;
+    
+    color: #999;
+    background: #fff;
+}
+
+a:hover,
+a:focus{
+    outline: none;
+}
+html, body, p, span, div, h1, h2, h3 ,h4 ,h5 ,h6, ul, li, ol, a, table, tr, td, th{
+    font-family: @font_default;
+    font-weight: 400;
+}
+.prelatife{
+    position: relative;
+}
+
+
+.features-icons .features-icons-item{
+    max-width: 80rem;
+}
+
+.call-to-action{
+    background: none;
+    background-color: transparent;
+    background-color: #E7EAF4;
+    .overlay{
+        background-color: #E7EAF4;
+    }
+    color: #000;
+    form{
+        input, textarea{
+            color: #000;
+        }
+    }
+}
+
+footer.footer{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+nav.navbar.navbar-light{
+    ul.list-inline{
+        li{
+            a{
+                font-size: 15px;
+                font-weight: 600; 
+                color: #474747;
+            }
+        }
+        li:hover,
+        li:focus{
+            a{
+                color: #000;
+                text-decoration: none;
+            }
+        }
+        .list-inline-item:not(:last-child){
+            margin-right: 1.5rem;
+        }
+    }
+}
+
+h2{
+    color: #0fbe7c;
+}
+p.lead{
+    font-size: 1.1rem;
+}
+
+.customs_qa{
+    .card{
+        border-radius: 0px;
+        .card-header{
+            h5{
+                font-weight: 500; color: #000;
+                clear: both;
+                button{
+                    font-weight: 500; color: #000;
+                }
+                button:hover,
+                button:focus{
+                    text-decoration: none;
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            clear: both; 
+        }
+        .card-body{
+            p{
+                font-size: 14px;
+                color: #808080;
+            }
+        }
+        clear: both;
+    }
+    clear: both;
+}
+
+// multistep Form
+
+
+#grad1 {
+    background: url('../images/citrak-led.jpg') no-repeat;
+    background-size: cover;
+    background-color: transparent;
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#msform fieldset .form-card,
+.rescheules.form-card {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow:    0px 0px 12px 0px rgba(50, 50, 50, 0.1);
+    box-shadow:         0px 0px 12px 0px rgba(50, 50, 50, 0.1);
+
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+    position: relative;
+    border: 1px solid #d8d8d8;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #9E9E9E
+}
+
+#msform select,
+#msform input[type=text], #msform input[type=email], #msform input[type=file],
+#msform textarea {
+    padding: 0px 8px 4px 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: @open_sans;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 0px;
+}
+
+#msform select:focus,
+#msform input[type=text]:focus, #msform input[type=email]:focus, #msform input[type=file]:focus,
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: skyblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 18px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f023"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f09d"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: skyblue
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+#grad1{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.customs_form{
+    fieldset{
+        h6{
+            color: #3C3333;
+        }
+        .form-group{
+            label{
+                font-weight: 700; color: #545454;
+            }
+            select, textarea,
+            input{
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+    p.info_houses{
+        font-size: 15px;
+        font-weight: 400;
+        color: #545454;
+    }
+}
+
+.navbar-brand{
+    img{
+        max-height: 45px; 
+    }
+}
+
+button.btsn_searchs{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.boxed_registers{
+    h2{
+        text-transform: uppercase;
+    }
+    clear: both;
+}
+
+.blocks_data_help{
+    p{
+        font-size: 13px;
+        a{
+            color: #0c5460;
+            text-decoration: none;
+        }
+        text-decoration: none;
+    }
+}
+
+.blocks_outers_infosuccess{
+    h5,
+    p{
+        color: #555555;
+    }
+    p{
+        font-size: 16px;
+    }
+    color: #555555;
+}
+
+.box-fix-active_appointmentf{
+    h4{
+        font-size: 23px;
+    }
+    p{
+        font-size: 15px;
+        font-weight: 400;
+        color: #454545;
+        line-height: 1.7;
+    }
+    font-size: 13px;
+    font-weight: 400;
+    color: #454545;
+}
+
+.color_green{
+    color: #0fbe7c;
+}
+.fz20{ 
+    font-size: 30px;
+}
+form.b_form_reschedule{
+    .form-group{
+        label{
+            font-size: 13px;
+        }
+        margin-bottom: 0.7rem;
+    }
+    select.form-control,
+    input.form-control{
+        border-color: #ccc;
+        max-width: 215px;
+        font-size: 13px;
+        text-align: left;    
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    select.form-control{
+        text-align: left;
+    }
+    button{
+        padding: 0.33rem 1.5rem;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+.pn_infos2{
+    p{
+        font-size: 13px;
+    }
+}
+
+
+@import 'media_subp.less';
